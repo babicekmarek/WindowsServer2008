@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "quartz/content/Windows SERVER 2008.md",
+                "file": "quartz/content/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "quartz/content/Windows SERVER 2008.md",
+                "file": "quartz/content/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "quartz/content/Windows SERVER 2008.md",
+                "file": "quartz/content/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "quartz/content/Windows SERVER 2008.md"
+                "file": "quartz/content/index.md"
               }
             }
           }
@@ -148,6 +148,12 @@
   },
   "active": "61e7ba31c51ee43d",
   "lastOpenFiles": [
-    "quartz/content/index.md"
+    "quartz/content/Linux Debian Server.md",
+    "quartz/content/Windows SERVER 2008.md",
+    "quartz/content/Windows SERVER 2008 1.md",
+    "quartz/content/index 1.md",
+    "ServerPM/Linux Debian Server 1.md",
+    "quartz/content/index.md",
+    "quartz/README.md"
   ]
 }
