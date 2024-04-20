@@ -217,3 +217,45 @@ COMPLEXITY nechá na ENABLED a miinimální délka hesla se zvětší.
 ![[Pasted image 20240420111139.png]]
 
 Vynucení změny politiky - CMD – GPUPDATE /FORCE
+
+---
+
+## Quotas
+
+PT - pravé tlačítko myši
+
+Udělat sdílenou složku - PT – Properties – Sharing – Advanced sharing – X share folders – přidat admina a skupinu – dát jim Change a Read – Apply – OK
+
+Start – RUN – IP serveru [\\192.168.1.130](file:///\\192.168.1.130) – proklikat se na sdílenou složku a zkopírovat její název nahoře
+
+V AD označit všechy users – PT - Properties – Profile – X Home folder – Connect – mapovací písmeno (U: ) – Paste – dopíše se na konec %username% (např [\\192.168.1.130\sales_data\%username%](file:///\\192.168.1.130\sales_data\%25username%25)) - Apply – OK
+
+FSRM : Server Manager – Roles – okno vpravo jít dolů do sekce File services – File services resource manager má Not installed – Add role services – X FSRM – Next – Storage monitoring – vybere se jednotka (local - E:) - Next – Volume usage threshold – 85 - Options – X Quota usage report ( Files by owner report a Files by file group report jsou už X) – OK – Next– Report options – vybere se na disku C: složka pro reporty – Next – Install – Close – FSRM Installed
+
+ v Administrative Tools se objeví FSRM – Quota Management – Quota Templates – PT – Create Quota Template – Template Name – Space limit – Limit – Hard Quota NEBO Soft Quota (Hard) – Notification Thresholds – Add – zadají se % pro Generation notifications – Event log – X Send warning to Event log – Report – X Generate Report - X Quota Usage  X Large Files X Files by owner – OK - může se zopakovat Add pro jiná % (např. 75% a 95%) - OK – OK – Quotas – PT – Create Quota – Auto apply template … - Quota Path - Browse – proklikat se na disk E: a složku sales_data – OK – X Derive properties from this quota template… - vybere se vytvořená šablona – Create
+
+Win7 – se přihlásí do domény – v AD v doméně by už měl býtí v Computers počítač – PT – Properties… - pro kontrolu – měl by tam být i namapovaný disk
+
+Eventvwr.msc – Custom views – Administrative Events – hledat Warning ze source SRMSVC
+
+---
+
+## PrintServer
+
+PT - pravé tlačítko myši
+
+Server 2008
+
+Server Manager – Roles – Add Roles – Next – X Print and Document Services – Next – Next – X Print Server – Next – Install – Close – Start – Administrative Tools – Print Management – Print Servers – „server_name“ (local) – Ports - Printers – PT okno vpravo – Add Printer – o Add a new printer… LPT1 – Install a new driver – Next – za chvíli se objeví seznam tiskáren, vybere se ta správná – Next – Printer Name (zvolí se podle umístění, např. Front Office Printer) – X Share Name (zvolí se podle umístění, např. Front Office Printer) – Next – Next - …instaluje se… - Finish – tiskárna se objeví vpravo
+
+Kontrola: Start – do pole Search Program and Files se napíše [\\server_name](file:///\\server_name) – objeví se okno Computer – Network s tiskárnou a sdílenými složkami
+
+Pokr. na Print Management – Printers – PT na tiskárnu – Deploy with Group Policy – Browse – vybere se politika (např. Default Domain Policy) – OK – X The users…(per user) – X The computers…(per machine) – Add – politiky se objeví dole v seznamu – Apply – OK - Deployed Printers – v pravém okně je tiskárna s politikami
+
+Win7
+
+GPUPDATE – Start – Devices and Printers nebo přes Control Panel – je tam serverová  tiskárna …. Taky se dá Start - Computer – PT – Properties – Network
+
+Server 2008
+
+Print Management – Print Servers – vpravo – tiskárna – PT – Properties – Sharing – Additional Drivers – zadá se např. X x86 je-li x64, aby se nainstaloval také 32 bitový driver (pro síť s různými systémy) – karta Advanced – Available from (pro omezený provoz) – New Driver (aktualizace driveru) – karta Security – různé přístupy
