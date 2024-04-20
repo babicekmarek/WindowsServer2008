@@ -91,7 +91,8 @@ Adresu zjistím přes: `hostname -l`
 systemctl restart dnsmasq
 systemctl status dnsmasq
 ```
-	- Na klientovi nastavení -> možnosti adaptéru -> nastavím DNS
+
+- Na klientovi nastavení -> možnosti adaptéru -> nastavím DNS
 
 ---
 
