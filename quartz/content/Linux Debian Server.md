@@ -9,7 +9,10 @@
 - Network mirror -> yes -> czechia -> merlin fit (nebo fyzicky nejbližší)
 - http proxy nedávám
 - Popularity contest -> no
-- Žádný desktop environment neinstaluju, viz obrázek:![[Pasted image 20240420083426.png]]
+- Žádný desktop environment neinstaluju, viz obrázek:
+
+![[Pasted image 20240420083426.png]]
+
 - Grub boot loader -> yes -> /dev/sda
 - Na serveru dělám vše jako ROOT
 
@@ -25,9 +28,13 @@ cd /etc/apt
 nano sources.list
 ```
 - Zakomentářuju (#hashtagem) první řádek viz obrázek (cd rom)
+
 ![[Pasted image 20240420084314.png]]
+
 - V midnighCommander si přes options (F9 o menu, a pak vyberu options, pak se řídím podle menu dole), options -> panel options, zapnu si Lynx-like motion
+ 
  ![[Pasted image 20240420084452.png]]
+ 
 
 --- 
 
@@ -76,7 +83,9 @@ apt install dnsmasq
 
 Všechny IP adresy dávám do `/etc/hosts`
 Adresu zjistím přes: `hostname -l`
+
 ![[Pasted image 20240420090304.png]]
+
 Ze zadání doména a adresa, píšu takhle:
 - Musím uložit, jinak nefunguje
 ```bash
