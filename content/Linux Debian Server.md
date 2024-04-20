@@ -97,5 +97,38 @@ systemctl status dnsmasq
 ---
 
 # DHCP
+- taky dnsmasq
+`/etc/dnsmasq.conf`, tam si najdu dhcp-range
+- Zadávám:
+`dhcp-range= začátek adres, konec ares, délka trvání`
+- ![[Pasted image 20240420102606.png]]
+- Definované adresy:
+`dhcp-host= mac adresa, ip`
+- ![[Pasted image 20240420102713.png]]
 
+---
 
+# Statická IP
+`/etc/network/interfaces`
+- ![[Pasted image 20240420102810.png]]
+
+---
+
+#  Časový server
+`apt install ntp`
+- Komunikace pouze s interní sítí: router je nastavený tak, že nepustí nic dovnitř (automaticky) 
+- (Kdyby se někdo ptal) - specifikovat server -> `/etc/ntpsec/ntp.conf` -> server *názevDomény*
+- ![[Pasted image 20240420103126.png]]
+- Nastavím ntp i na windows
+
+- WWW server
+- Instalace -> `apt install apache2`
+- `/etc/apache2` - dělí se na available a enabled
+- Available znamená nainstalovaný, enabled je i aktivovaný
+
+- `systemctl status apache2` - kontrola, že běží
+- Pokud nefunguje - ip tables z prezentace
+- Nainstaluju php, příkaz z prezentace
+- V praktické budeme muset i otestovat php
+
+- VirtualHost patri do `/etc/apache2/sitesEnabled` podle prezentace
