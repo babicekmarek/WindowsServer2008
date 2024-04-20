@@ -1,4 +1,4 @@
-# Instalace:
+# Instalace
 - Graphic Install -> lokalita: czechia -> vše ostatní americký
 - Hostname podle zddání, do první tečky je hostname
 - Heslo a uživatel ze zadání
@@ -29,11 +29,11 @@ nano sources.list
 ```
 - Zakomentářuju (#hashtagem) první řádek viz obrázek (cd rom)
 
-![[Pasted image 20240420084314.png]]
+- ![[Pasted image 20240420084314.png]]
 
 - V midnighCommander si přes options (F9 o menu, a pak vyberu options, pak se řídím podle menu dole), options -> panel options, zapnu si Lynx-like motion
 
-![[Pasted image 20240420084452.png]]
+- ![[Pasted image 20240420084452.png]]
 
 --- 
 
@@ -42,7 +42,7 @@ nano sources.list
 ```bash
 hostname -l
 ```
-### Server:
+### Server
 - Instalace: 
 ```bash
 apt install openssh-server
@@ -83,7 +83,7 @@ apt install dnsmasq
 Všechny IP adresy dávám do `/etc/hosts`
 Adresu zjistím přes: `hostname -l`
 
-![[Pasted image 20240420090304.png]] 
+- ![[Pasted image 20240420090304.png]] 
 
 - Ze zadání doména a adresa, píšu takhle:
 	- Musím uložit, jinak nefunguje
